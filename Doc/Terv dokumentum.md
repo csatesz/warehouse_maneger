@@ -10,7 +10,6 @@ Beszállítók és Vásárlók menedzsmentje.
 ## Feladat megoldása:
 Képzeletbeli termelő vállalat megrendelést adott ki egy raktár management program megtervezésére. A képzeletbeli vállalat raktárfolyamatait a következő ábra szemlélteti.
 
-![folyamatabra](https://github.com/JakabZsolt/ProgTechGyak/blob/main/Doc/img/1_abra.png)
 
 A vállalatnak három raktár rendszere létezik. Az alapanyag raktár, a késztermék raktár és a félkésztermék raktár. Mindegyik raktárba az anyagok be és ki áramolnak. Az alapanyag raktárba befelé a beszállító felől érkezik, kifelé pedig a termelés felé áramolnak az anyagok. A termelés az alapanyagokból késztermékeket állít elő. A késztermékek a késztermék raktárba mennek be, ahonnan kifele a vevő felé továbbítódik a termék a vevői rendelések alapján. Ha az alapanyag nem áll rendelkezésre, akkor a késztermék a félkésztermék raktárba kerül.
 -	Azt, hogy milyen készterméket kell gyártani, egy gyártási sorrend lista határozza meg,
@@ -21,7 +20,7 @@ A vállalatnak három raktár rendszere létezik. Az alapanyag raktár, a készt
 ### Program leírása:
 #### UML ábra:
 
-![folyamatabra](https://github.com/JakabZsolt/ProgTechGyak/blob/main/Doc/img/2_abra.png)
+![folyamatabra](https://github.com/csatesz/warehouse_maneger/blob/main/Doc/img/UML.png)
 
 A programban három raktárrendszert kerül megvalósításra, melyeknek hasonlóak a viselkedései. Ezért létrehoztam egy abstrakt osztályt, ebből származnak az egyes gyermek raktárosztályok.
 Minden raktár adatbázis műveletet valósít meg. Az adatbázisban tároljuk az anyagok adatait. Az adatbázis kapcsolat miatt, az egyes implementált raktárosztályok singleton osztályoknak kell lenniük. Így biztosítható, hogy egyszerre csak egy művelet végrehajtás legyen az adatbázisban.
